@@ -263,7 +263,7 @@ void _set_vbus(struct musb *musb, int is_on)
 		fan5405_config_interface(0x02, 0x8e, 0xff, 0x00);
 #else
 		DBG(0, "**** Drive VBUS LOW KS!!!!!\n");
-		pinctrl_select_state(pinctrl, pinctrl_drvvbus_low);
+		pinctrl_select_state(pinctrl, pinctrl_drvvbus_high);
 #endif
 		vbus_on = false;
 	}

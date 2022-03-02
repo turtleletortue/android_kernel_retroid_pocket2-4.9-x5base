@@ -16,6 +16,8 @@
 
 #include <lcm_drv.h>
 
+extern struct LCM_DRIVER ili9881c_hd_dsi_vdo_lcm_drv;	
+extern struct LCM_DRIVER st7703_800x640_lcm_drv;
 extern struct LCM_DRIVER hct_otm1285a_dsi_vdo_hd_boe;
 extern struct LCM_DRIVER hct_ili9881_dsi_vdo_hd_cpt;
 extern struct LCM_DRIVER hct_hx8394f_dsi_vdo_hd_cmi;

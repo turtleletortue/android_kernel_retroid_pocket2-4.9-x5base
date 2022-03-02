@@ -636,6 +636,7 @@ static struct mt_cpu_dvfs *id_to_cpu_dvfs(enum mt_cpu_dvfs_id id)
 
 /* CPU LEVEL 0, 1.3GHz segment */
 static struct mt_cpu_freq_info opp_tbl_e1_0[] = {
+    OP(CPU_DVFS_FREQ0, 131000),
 	OP(CPU_DVFS_FREQ1, 130625),
 	OP(CPU_DVFS_FREQ2, 122500),
 	OP(CPU_DVFS_FREQ3, 119375),
@@ -1971,7 +1972,7 @@ static unsigned int _calc_new_opp_idx(struct mt_cpu_dvfs *p, int new_opp_idx)
 	if (p->dvfs_disable_by_ptpod) {
 		/* at least CPU_DVFS_FREQ6 will make sure VBoot >= 1V */
 		/* idx = _search_available_freq_idx(p, CPU_DVFS_FREQ6, CPUFREQ_RELATION_L); */
-		idx = _search_available_freq_idx(p, CPU_DVFS_FREQ1, CPUFREQ_RELATION_L);
+		idx = _search_available_freq_idx(p, CPU_DVFS_FREQ0, CPUFREQ_RELATION_L);
 
 		if (idx != -1) {
 			new_opp_idx = idx;

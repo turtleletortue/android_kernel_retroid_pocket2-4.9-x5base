@@ -80,6 +80,7 @@ obj-$(CONFIG_MTK_SYNC) += sync/
 obj-$(CONFIG_MTK_SECURITY_SW_SUPPORT) +=masp/
 obj-$(CONFIG_MTK_BLOCK_TAG) +=blocktag/
 obj-$(CONFIG_MTK_IMGSENSOR) += imgsensor/src/
+obj-$(CONFIG_MTK_IMGSENSOR) += cameraisp/
 obj-$(CONFIG_MTK_CAM_CAL) += cam_cal/src/
 ifneq ($(wildcard $(srctree)/drivers/misc/mediatek/met_drv/),)
 obj-y += met_drv/
@@ -119,7 +120,6 @@ obj-$(CONFIG_MTK_RAM_CONSOLE) += ram_console/
 obj-$(CONFIG_MTK_DRAM_LOG_STORE)    += log_store/
 obj-$(CONFIG_MEDIATEK_SOLUTION)	+= aee/
 obj-$(CONFIG_MTK_MLOG) += mlog/
-obj-y += cameraisp/
 obj-$(CONFIG_MTK_CMDQ) += cmdq/
 obj-$(CONFIG_MTK_CMDQ) += mdp/
 obj-$(CONFIG_MTK_CMDQ_TAB) += cmdq/
